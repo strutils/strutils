@@ -16,7 +16,7 @@
     "patch": "npm version patch && npm run pub && git push --follow-tags",
     "minor": "npm version minor && npm run pub && git push --follow-tags",
     "major": "npm version major && npm run pub && git push --follow-tags",
-    "pregenerate-docs": "npm run compile",
+    "pregenerate-docs": "npx swc src/index.ts -d dist --config-file .swcrc_jsdoc",
     "generate-docs": "npx jsdoc dist/index.js README.md -t node_modules/docdash"
   },
   "repository": {

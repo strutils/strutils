@@ -10,7 +10,10 @@
     },
     "minify": {
       "compress": true,
-      "mangle": true
+      "mangle": true,
+      "format": {
+        "comments": "all"
+      }
     },
     "target": "es2021",
     "loose": true
