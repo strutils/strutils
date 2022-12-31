@@ -12,7 +12,7 @@ A small package to aid with manipulating strings with functions such as:
 ## Usage
 
 ```js
-import {camelCase, snakeCase, /* and any other utilities you want */ } from "strutils";
+import {camelCase, snakeCase, /* and any other utilities you want */ } from "@flzyy/strutils";
 
 camelCase("Hello world"); // helloWorld
 snakeCase("Hello World"); // hello_world
@@ -20,7 +20,7 @@ snakeCase("Hello World"); // hello_world
 // CJS
 
 (async () => {
-  const { camelCase, snakeCase } = await import("strutils");
+  const { camelCase, snakeCase } = await import("@flzyy/strutils");
 
   camelCase("Hello world"); // helloWorld
   snakeCase("Hello World"); // hello_world
@@ -28,7 +28,7 @@ snakeCase("Hello World"); // hello_world
 
 // or
 
-import("strutils").then((module) => {
+import("@flzyy/strutils").then((module) => {
   const { camelCase, snakeCase } = module;
 
   camelCase("Hello world"); // helloWorld
