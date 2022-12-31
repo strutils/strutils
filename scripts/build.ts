@@ -15,7 +15,3 @@ await copyFile(
   "./README.md",
   "./dist/README.md",
 );
-await copyFile(
-  "./LICENSE",
-  "./dist/LICENSE",
-);
