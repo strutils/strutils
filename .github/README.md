@@ -1,5 +1,8 @@
 # strutils
 
+[![npm version](https://img.shields.io/npm/v/@flzyy/strutils)](https://www.npmjs.com/package/@flzyy/srtutils)
+[![npm downloads](https://img.shields.io/npm/dw/@flzyy/strutils.svg)](https://www.npmjs.com/package/@flzyy/strutils)
+
 A small package to aid with manipulating strings with functions such as:
 
 - `camelCase()`
