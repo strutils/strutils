@@ -25,10 +25,10 @@ jobs:
       - run: npm run generate-docs
 
       - name: Push to strutils/strutils.github.io
+        working-directory: ./out
         uses: GuillaumeFalourd/git-commit-push@v1.3
         with:
           commit_message: Pushed new documentation!
           target_branch: main
-          files: out/
           remote_repository: https://github.com/strutils/strutils.github.io
           access_token: ${{ secrets.PUSH_TOKEN }}
