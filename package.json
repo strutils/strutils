@@ -17,8 +17,7 @@
     "minor": "npm version minor && npm run pub && git push --follow-tags",
     "major": "npm version major && npm run pub && git push --follow-tags",
     "pregenerate-docs": "npm run compile",
-    "generate-docs": "npx jsdoc dist/index.js README.md -t node_modules/docdash",
-    "postgenerate-docs": "npm run clean"
+    "generate-docs": "npx jsdoc dist/index.js README.md -t node_modules/docdash"
   },
   "repository": {
     "type": "git",
