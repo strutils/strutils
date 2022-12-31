@@ -113,3 +113,22 @@ export const title = (value: string): string => {
     (value) => value.charAt(0).toUpperCase() + value.substring(1).toLowerCase(),
   );
 };
+
+/**
+ * Finds the amount of times a Regex Pattern or a string.
+ *
+ * @example
+ * count("hello world", "o")
+ * // will result in 2
+ *
+ * @function
+ * @param {string} value - Value to search.
+ * @param {string | RegExp} pattern - The regex or string to count the amount of.
+ * @returns {number}
+ */
+export const count = (
+  value: string,
+  pattern: string | RegExp,
+): number => {
+  return value.split(pattern).length - 1;
+};

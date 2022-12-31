@@ -82,3 +82,16 @@ export declare const space: (value: string) => string;
  * @returns {string}
  */
 export declare const title: (value: string) => string;
+/**
+ * Finds the amount of times a Regex Pattern or a string.
+ *
+ * @example
+ * count("hello world", "o")
+ * // will result in 2
+ *
+ * @function
+ * @param {string} value - Value to search.
+ * @param {string | RegExp} pattern - The regex or string to count the amount of.
+ * @returns {number}
+ */
+export declare const count: (value: string, pattern: string | RegExp) => number;

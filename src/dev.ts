@@ -1,5 +1,6 @@
 import {
   camelCase,
+  count,
   isString,
   kebabCase,
   pascalCase,
@@ -8,4 +9,4 @@ import {
   title,
 } from "./index.js";
 
-console.log(isString("Hello_world"));
+console.log(count("Hello world", /\w+/));

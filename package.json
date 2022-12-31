@@ -9,16 +9,18 @@
     "compile": "npx swc src/index.ts -d dist --config-file .swcrc",
     "compile:dev": "npx swc src/index.ts src/dev.ts -d dist --config-file .swcrc",
     "clean": "rmdir /Q /S dist",
-    "build": "npm run compile && npx swc scripts/build.ts -d scripts/dist --config-file .swcrc && node scripts/dist/build.js",
+    "build": "npm run compile && npx swc scripts/build.ts -d scripts/dist --config-file .swcrc && node scripts/dist/build.js && npm run declaretypes",
     "predev": "npm run compile:dev",
     "dev": "node dist/dev.js",
     "postdev": "npm run clean",
     "pub": "npm run build && cd dist && npm publish --access=public",
+    "postpub": "npm run clean",
     "patch": "npm version patch && npm run pub && git push --follow-tags",
     "minor": "npm version minor && npm run pub && git push --follow-tags",
     "major": "npm version major && npm run pub && git push --follow-tags",
     "pregenerate-docs": "npx swc src/index.ts -d dist --config-file .swcrc_jsdoc",
-    "generate-docs": "npx jsdoc dist/index.js README.md -t node_modules/docdash"
+    "generate-docs": "npx jsdoc dist/index.js README.md -t node_modules/docdash",
+    "declaretypes": "tsc --project tsconfig-declaration.json"
   },
   "repository": {
     "type": "git",
