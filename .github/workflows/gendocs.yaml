@@ -25,12 +25,10 @@ jobs:
       - run: npm run generate-docs
 
       - name: Push to strutils/strutils.github.io
-        uses: andstor/copycat-action@v3
+        uses: GuillaumeFalourd/git-commit-push@v1.3
         with:
-          personal_token: ${{ secrets.PUSH_TOKEN }}
-          src_path: out/
-          dst_path: /.
-          dst_owner: strutils
-          dst_repo_name: strutils.github.io
-          dst_branch: main
-          src_branch: main
+          commit_message: Pushed new documentation!
+          target_branch: main
+          files: out
+          remote_repository: https://github.com/strutils/strutils.github.io/
+          access_token: ${{ github.token }}
