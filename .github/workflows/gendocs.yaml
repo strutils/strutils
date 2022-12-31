@@ -34,7 +34,7 @@ jobs:
       - name: Push to strutils/strutils.github.io
         run: |
           cp -RT out/ docs/
-          cd documentation
+          cd docs
           git config --local user.name "github-actions[bot]"
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
