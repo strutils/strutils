@@ -31,4 +31,4 @@ jobs:
           target_branch: main
           files: out/
           remote_repository: https://github.com/strutils/strutils.github.io
-          access_token: ${{ github.token }}
+          access_token: ${{ secrets.PUSH_TOKEN }}
