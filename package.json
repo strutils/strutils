@@ -1,5 +1,5 @@
 {
-  "name": "strutils",
+  "name": "@flzyy/strutils",
   "version": "1.0.0",
   "description": "Random utilities for manipulating strings.",
   "main": "index.js",
@@ -12,7 +12,7 @@
     "predev": "npm run compile:dev",
     "dev": "node dist/dev.js",
     "postdev": "npm run clean",
-    "pub": "npm run build && cd dist && npm publish",
+    "pub": "npm run build && cd dist && npm publish --access=public",
     "patch": "npm version patch && npm run pub && git push --follow-tags",
     "minor": "npm version minor && npm run pub && git push --follow-tags",
     "major": "npm version major && npm run pub && git push --follow-tags",
