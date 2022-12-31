@@ -1,6 +1,6 @@
 {
   "name": "@flzyy/strutils",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Random utilities for manipulating strings.",
   "main": "index.js",
   "types": "index.d.ts",
