@@ -1,12 +1,3 @@
-import {
-  camelCase,
-  count,
-  isString,
-  kebabCase,
-  pascalCase,
-  snakeCase,
-  space,
-  title,
-} from "./index.js";
+import { count } from "./index.js";
 
 console.log(count("Hello world", /\w+/));
