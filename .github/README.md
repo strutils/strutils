@@ -2,6 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/@flzyy/strutils)](https://www.npmjs.com/package/@flzyy/srtutils)
 [![npm downloads](https://img.shields.io/npm/dw/@flzyy/strutils.svg)](https://www.npmjs.com/package/@flzyy/strutils)
+[![CodeFactor](https://www.codefactor.io/repository/github/flzyy/larser/badge)](https://www.codefactor.io/repository/github/flzyy/larser)
 
 A small package to aid with manipulating strings with functions such as:
 
@@ -15,7 +16,7 @@ A small package to aid with manipulating strings with functions such as:
 ## Usage
 
 ```js
-import {camelCase, snakeCase, /* and any other utilities you want */ } from "@flzyy/strutils";
+import { camelCase, snakeCase, /* and any other utilities you want */ } from "@flzyy/strutils";
 
 camelCase("Hello world"); // helloWorld
 snakeCase("Hello World"); // hello_world
