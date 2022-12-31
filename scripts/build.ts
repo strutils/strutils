@@ -15,3 +15,8 @@ await copyFile(
   "./README.md",
   "./dist/README.md",
 );
+
+await copyFile(
+  "./types/index.d.ts",
+  "./dist/index.d.ts",
+);

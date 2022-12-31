@@ -1,5 +1,6 @@
 dist
 distdev
+types
 # Logs
 logs
 *.log
