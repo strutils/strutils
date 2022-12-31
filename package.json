@@ -1,0 +1,57 @@
+{
+  "name": "strutils",
+  "version": "1.0.0",
+  "description": "Random utilities for manipulating strings.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "compile": "npx swc src/index.ts -d dist --config-file .swcrc",
+    "compile:dev": "npx swc src/index.ts src/dev.ts -d dist --config-file .swcrc",
+    "clean": "rmdir /Q /S dist",
+    "build": "npm run compile && npx swc scripts/build.ts -d scripts/dist --config-file .swcrc && node scripts/dist/build.js",
+    "predev": "npm run compile:dev",
+    "dev": "node dist/dev.js",
+    "postdev": "npm run clean",
+    "pub": "npm run build && cd dist && npm publish",
+    "patch": "npm version patch && npm run pub && git push --follow-tags",
+    "minor": "npm version minor && npm run pub && git push --follow-tags",
+    "major": "npm version major && npm run pub && git push --follow-tags",
+    "pregenerate-docs": "npm run compile",
+    "generate-docs": "npx jsdoc dist/index.js README.md -t node_modules/docdash",
+    "postgenerate-docs": "npm run clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/strutils/strutils.git"
+  },
+  "keywords": [
+    "string",
+    "utils",
+    "utilities",
+    "str",
+    "utility"
+  ],
+  "author": "FLzyy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/strutils/strutils/issues"
+  },
+  "homepage": "https://strutils.github.io/",
+  "devDependencies": {
+    "@swc/cli": "^0.1.59",
+    "@swc/core": "^1.3.24",
+    "@types/node": "^18.11.18",
+    "@typescript-eslint/eslint-plugin": "^5.47.1",
+    "@typescript-eslint/parser": "^5.47.1",
+    "docdash": "^2.0.0",
+    "eslint": "^8.30.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard-with-typescript": "^24.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.6.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "jsdoc": "^4.0.0",
+    "prettier": "^2.8.1",
+    "typescript": "^4.9.4"
+  }
+}

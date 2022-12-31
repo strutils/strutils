@@ -1,0 +1,34 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "src/index.ts"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: 19.3.0
+          cache: "npm"
+
+      - run: npm ci
+      - run: npm run generate-docs
+
+      - name: Push to strutils/strutils.github.io
+        uses: andstor/copycat-action@v3
+        with:
+          personal_token: ${{ secrets.PUSH_TOKEN }}
+          src_path: /out/
+          dst_path: /.
+          dst_owner: strutils
+          dst_repo_name: strutils.github.io
