@@ -32,3 +32,4 @@ jobs:
           dst_path: /.
           dst_owner: strutils
           dst_repo_name: strutils.github.io
+          dst_branch: main
