@@ -29,6 +29,6 @@ jobs:
         with:
           commit_message: Pushed new documentation!
           target_branch: main
-          files: out
-          remote_repository: https://github.com/strutils/strutils.github.io/
+          files: out/
+          remote_repository: https://github.com/strutils/strutils.github.io
           access_token: ${{ github.token }}
