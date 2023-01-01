@@ -9,7 +9,7 @@
     "compile": "npx swc src/index.ts -d dist --config-file .swcrc",
     "compile:dev": "npx swc src/index.ts src/dev.ts -d dist --config-file .swcrc",
     "clean": "rmdir /Q /S dist",
-    "build": "npm run compile && npx swc scripts/build.ts -d scripts/dist --config-file .swcrc && node scripts/dist/build.js && npm run declaretypes",
+    "build": "npm run compile && npm run declaretypes && npx swc scripts/build.ts -d scripts/dist --config-file .swcrc && node scripts/dist/build.js",
     "predev": "npm run compile:dev",
     "dev": "node dist/dev.js",
     "postdev": "npm run clean",
