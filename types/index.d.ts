@@ -1,3 +1,4 @@
+/// <reference types="node" resolution-mode="require"/>
 /**
  * Returns whether or not a value is a string.
  *
@@ -95,3 +96,21 @@ export declare const title: (value: string) => string;
  * @returns {number}
  */
 export declare const count: (value: string, pattern: string | RegExp) => number;
+/**
+ * Converts a string to a certain encoding.
+ *
+ * @example
+ * convert("hello world", "utf-8", "hex")
+ * // will result in 68656c6c6f20776f726c64
+ *
+ * @function
+ * @param {string} value - Value to convert.
+ * @param {Object} [options=] - Optional options.
+ * @param {BufferEncoding} [options.from=] - Buffer encoding to convert **from**.
+ * @param {string} [options.to=] - Buffer encoding to convert **to**.
+ * @returns {string}
+ */
+export declare const convert: (value: string, options?: {
+    from?: BufferEncoding;
+    to?: BufferEncoding;
+}) => string;
