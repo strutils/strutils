@@ -132,3 +132,24 @@ export const count = (
 ): number => {
   return value.split(pattern).length - 1;
 };
+
+/**
+ * Converts a string to a certain encoding.
+ *
+ * @example
+ * convert("hello world", "utf-8", "hex")
+ * // will result in 68656c6c6f20776f726c64
+ *
+ * @function
+ * @param {string} value - Value to convert.
+ * @param {Object} [options=] - Optional options.
+ * @param {BufferEncoding} [options.from=] - Buffer encoding to convert **from**.
+ * @param {string} [options.to=] - Buffer encoding to convert **to**.
+ * @returns {string}
+ */
+export const convert = (
+  value: string,
+  options?: { from?: BufferEncoding; to?: BufferEncoding },
+): string => {
+  return Buffer.from(value, options?.from).toString(options?.to);
+};

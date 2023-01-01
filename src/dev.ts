@@ -1,3 +1,5 @@
-import { count } from "./index.js";
+import { convert } from "./index.js";
 
-console.log(count("Hello world", /\w+/));
+console.log(convert("hello world", {
+  to: "hex",
+}));
