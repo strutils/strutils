@@ -114,3 +114,4 @@ export declare const convert: (value: string, options?: {
     from?: BufferEncoding;
     to?: BufferEncoding;
 }) => string;
+export declare const swapCase: (value: string) => string;

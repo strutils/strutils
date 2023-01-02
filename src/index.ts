@@ -154,6 +154,17 @@ export const convert = (
   return Buffer.from(value, options?.from).toString(options?.to);
 };
 
+/**
+ * Converts a string's uppercase characters to lowercase and vice versa.
+ *
+ * @example
+ * swapCase("Hello World")
+ * // will result in hELLO wORLD
+ *
+ * @function
+ * @param {string} value - Value to convert.
+ * @returns {string}
+ */
 export const swapCase = (value: string): string => {
   return [...value].map((char) =>
     char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase()
