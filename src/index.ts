@@ -153,3 +153,9 @@ export const convert = (
 ): string => {
   return Buffer.from(value, options?.from).toString(options?.to);
 };
+
+export const swapCase = (value: string): string => {
+  return [...value].map((char) =>
+    char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase()
+  ).join().replaceAll(",", "");
+};

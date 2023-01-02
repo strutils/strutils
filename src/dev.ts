@@ -1,3 +1,3 @@
-import { camelCase } from "./index.js";
+import { swapCase } from "./index.js";
 
-console.log(camelCase("Hello.world"));
+console.log(swapCase("Hello World"));
