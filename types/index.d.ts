@@ -114,4 +114,15 @@ export declare const convert: (value: string, options?: {
     from?: BufferEncoding;
     to?: BufferEncoding;
 }) => string;
+/**
+ * Converts a string's uppercase characters to lowercase and vice versa.
+ *
+ * @example
+ * swapCase("Hello World")
+ * // will result in hELLO wORLD
+ *
+ * @function
+ * @param {string} value - Value to convert.
+ * @returns {string}
+ */
 export declare const swapCase: (value: string) => string;
