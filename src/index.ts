@@ -25,12 +25,12 @@ export const isString = (value: any): boolean => {
  * @returns {string}
  */
 export const camelCase = (value: string): string => {
-  return value.replace(/[^a-zA-Z0-9]+/g, " ").replace(
+  return value.replace(
     /(?:^\w|[A-Z]|\b\w)/g,
     (word, index) => {
       return index === 0 ? word.toLowerCase() : word.toUpperCase();
     },
-  ).replace(/\s+/g, "");
+  ).replace(/\s+/g, "").replace(/[^a-zA-Z0-9]+/g, "");
 };
 
 /**
@@ -45,10 +45,10 @@ export const camelCase = (value: string): string => {
  * @returns {string}
  */
 export const pascalCase = (value: string): string => {
-  return value.replace(/[^a-zA-Z0-9]+/g, " ").replace(
+  return value.replace(
     /(?:^\w|[A-Z]|\b\w)/g,
     (word) => word.toUpperCase(),
-  ).replace(/\s+/g, "");
+  ).replace(/\s+/g, "").replace(/[^a-zA-Z0-9]+/g, "");
 };
 
 /**
