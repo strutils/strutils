@@ -110,7 +110,7 @@ export const space = (value: string): string => {
 export const title = (value: string): string => {
   return value.replace(
     /\w\S*/g,
-    (value) => value.charAt(0).toUpperCase() + value.substring(1).toLowerCase(),
+    (value) => value[0].toUpperCase() + value.substring(1).toLowerCase(),
   );
 };
 
@@ -168,5 +168,5 @@ export const convert = (
 export const swapCase = (value: string): string => {
   return [...value].map((char) =>
     char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase()
-  ).join().replaceAll(",", "");
+  ).join("");
 };
