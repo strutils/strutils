@@ -126,3 +126,15 @@ export declare const convert: (value: string, options?: {
  * @returns {string}
  */
 export declare const swapCase: (value: string) => string;
+/**
+ * Reverses a string.
+ *
+ * @example
+ * reverse("Hello World")
+ * // will result in dlroW olleH
+ *
+ * @function
+ * @param {string} value - Value to convert.
+ * @returns {string}
+ */
+export declare const reverse: (value: string) => string;
