@@ -1,3 +1,3 @@
-import { swapCase } from "./index.js";
+import { reverse } from "./index.js";
 
-console.log(swapCase("Hello World"));
+console.log(reverse("Hello World"));

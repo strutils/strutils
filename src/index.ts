@@ -170,3 +170,18 @@ export const swapCase = (value: string): string => {
     char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase()
   ).join("");
 };
+
+/**
+ * Reverses a string.
+ *
+ * @example
+ * reverse("Hello World")
+ * // will result in dlroW olleH
+ *
+ * @function
+ * @param {string} value - Value to convert.
+ * @returns {string}
+ */
+export const reverse = (value: string): string => {
+  return [...value].reverse().join("");
+};
